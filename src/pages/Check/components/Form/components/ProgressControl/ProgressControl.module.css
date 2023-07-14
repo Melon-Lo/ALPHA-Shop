@@ -8,7 +8,18 @@
 .buttonGroup {
   width: 80%;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+}
+
+.previous {
+  width: 8rem;
+  height: 2.5rem;
+  background-color: #fd63ab;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-weight: 1000;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .next {
