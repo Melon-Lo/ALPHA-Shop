@@ -1,0 +1,88 @@
+.stepOneContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.contact {
+  width: 80%;
+}
+
+.formTitle {
+  margin: 1rem 0;
+}
+
+.inputContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 2rem;
+  grid-template-areas: 
+    'title name name name'
+    'phoneNumber phoneNumber email email'
+    'city address address address';
+}
+
+.inputSet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 0;
+  padding: 0.2rem 0;
+}
+
+.title {
+  grid-area: title;
+  composes: inputSet;
+}
+
+.name {
+  grid-area: name;
+  composes: inputSet;
+}
+
+.phoneNumber {
+  grid-area: phoneNumber;
+  composes: inputSet;
+}
+
+.email {
+  grid-area: email;
+  composes: inputSet;
+}
+
+.city {
+  grid-area: city;
+  composes: inputSet;
+}
+
+.address {
+  grid-area: address;
+  composes: inputSet;
+}
+
+.inputLabel {
+  composes: inputSet;
+  color: rgb(70, 70, 70);
+  font-size: 0.8rem;
+}
+
+.selectorContainer {
+  composes: inputSet;
+  width: 100%;
+}
+
+.optionBox {
+  width: 100%;
+  height: 1.8rem;
+}
+
+.inputBox {
+  composes: inputSet;
+  width: 100%;
+  height: 1.5rem;
+}

@@ -1,0 +1,36 @@
+.stepProgressContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.progressStep {
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.progressIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: rgba(202, 202, 202, 0.5);
+  border: 1px solid rgb(199, 199, 199);
+  border-radius: 50%;
+}
+
+.progressText {
+  color: rgb(149, 149, 149);
+}
+
+.progressLabel {
+  display: flex;
+  align-items: center;
+  color: gray;
+  font-size: 0.8rem;
+}
