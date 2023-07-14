@@ -1,0 +1,11 @@
+.checkContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkTitle {
+  width: 80%;
+  display: flex;
+  justify-content: start;
+}
