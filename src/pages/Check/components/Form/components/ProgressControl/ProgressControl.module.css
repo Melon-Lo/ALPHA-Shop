@@ -14,21 +14,16 @@
 .previous {
   width: 8rem;
   height: 2.5rem;
-  background-color: #fd63ab;
+  background-color: transparent;
   border: none;
-  color: rgb(255, 255, 255);
+  color: rgb(74, 74, 74);
   font-weight: 1000;
   border-radius: 8px;
   cursor: pointer;
 }
 
 .next {
-  width: 8rem;
-  height: 2.5rem;
+  composes: previous;
   background-color: #fd63ab;
-  border: none;
   color: rgb(255, 255, 255);
-  font-weight: 1000;
-  border-radius: 8px;
-  cursor: pointer;
 }
