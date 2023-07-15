@@ -15,7 +15,7 @@ On this webpage, you can freely choose the products you want! Still want to hesi
 ### How to use
 
 1. Install node.js and npm.
-2. Clone git https://github.com/Melon-Lo/My-First-React-Form .
+2. Clone git https://github.com/Melon-Lo/ALPHA-Shop .
 3. Enter the directory through the terminal, and enter:
    `npm run start`
 4. If you see this messege, open the browser to go to the web address below.
