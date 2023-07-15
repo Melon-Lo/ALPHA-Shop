@@ -28,7 +28,7 @@ export default function ProgressControl({ step, setStep }) {
           className={styles.previous}
           onClick={handlePreviousClick}>
           <LeftArrow className={styles.stepButton} />
-          上一步{step}
+          上一步
         </button>
         <button 
           className={styles.next}
