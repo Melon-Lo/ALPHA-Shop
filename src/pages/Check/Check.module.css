@@ -1,11 +1,18 @@
-.checkContainer {
+.checkSection {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.checkContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .checkTitle {
-  width: 80%;
+  width: 100%;
+  margin-left: 10%;
   display: flex;
   justify-content: start;
 }
