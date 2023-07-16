@@ -17,13 +17,13 @@
 .inputContainer {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 1.5rem;
   grid-template-areas: 
-    'title name name name'
-    'phoneNumber phoneNumber email email'
-    'city address address address';
+    'title title name name name name'
+    'phoneNumber phoneNumber phoneNumber email email email'
+    'city city address address address address';
 }
 
 .inputSet {

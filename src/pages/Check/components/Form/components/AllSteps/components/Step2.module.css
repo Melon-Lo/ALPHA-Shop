@@ -1,7 +1,9 @@
 .stepTwoContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
+  margin: 1rem 0;
 }
 
 .form {
@@ -12,7 +14,6 @@
   width: 80%;
   display: flex;
   justify-content: space-between;
-  margin: 0 1rem;
   padding: 1rem;
 }
 

@@ -1,5 +1,5 @@
 import styles from './Step1.module.css'
-import cityData from './cityData'
+import cityData from '../cityData'
 
 export default function Step1() {
   const cityOption = cityData.map(city => (

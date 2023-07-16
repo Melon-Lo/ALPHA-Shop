@@ -5,7 +5,7 @@ export default function Step2() {
     <section className={styles.stepTwoContainer}>
       <form action="submit" className={styles.form}>
         <h3 className="formTitle">運送方式</h3>
-        <div className="inputContainer">
+        <div className={styles.inputContainer}>
           <label class={styles.radioGroup}data-price="0">
             <input id="shipping-standard" type="radio" name="shipping"  checked/>
             <div  className={styles.infoBox}>
