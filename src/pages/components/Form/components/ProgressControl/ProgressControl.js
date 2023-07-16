@@ -3,12 +3,12 @@ import { ReactComponent as RightArrow } from 'assets/icons/right-arrow.svg'
 import { ReactComponent as LeftArrow } from 'assets/icons/left-arrow.svg'
 
 export default function ProgressControl({ step, setStep }) {
-  function Button({ step, className, onClick, text}) {
-    return (
+  function Button({ className, onClick, text}) {
+   return (
       <button className={className} onClick={onClick}>
-        {step === 2 || step === 3 && <LeftArrow />}
+        {text === '上一步' && <LeftArrow className={styles.stepButton}/>}
         {text}
-        {step === 1 || step === 2 && <RightArrow />}
+        {text === '下一步' && <RightArrow className={styles.stepButton}/>}
       </button>
     )
   }
@@ -23,15 +23,15 @@ export default function ProgressControl({ step, setStep }) {
       )
     } else if(step === 2) {
       return (
-        <>
+        <> 
           <Button 
-          className={styles.previous}
-          onClick={handlePreviousClick}
-          text={'上一步'}/>
+            className={styles.previous}
+            onClick={handlePreviousClick}
+            text={'上一步'}/>
           <Button 
-          className={styles.next}
-          onClick={handleNextClick}
-          text={'下一步'}/>
+            className={styles.next}
+            onClick={handleNextClick}
+            text={'下一步'}/>
         </>
       )
     } else if(step === 3) {
@@ -42,9 +42,9 @@ export default function ProgressControl({ step, setStep }) {
           onClick={handlePreviousClick}
           text={'上一步'}/>
         <Button 
-        className={styles.next}
-        // onClick={onClick}
-        text={'完成訂單'}/>
+          className={styles.next}
+          // onClick={onClick}
+          text={'完成訂單'}/>
       </>
       )
     }
