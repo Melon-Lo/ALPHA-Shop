@@ -1,7 +1,6 @@
-import { ReactComponent as RightArrow } from '../../../../../../icons/right-arrow.svg'
-import { ReactComponent as LeftArrow } from '../../../../../../icons/left-arrow.svg'
 import styles from './ProgressControl.module.css'
-import { useState } from 'react'
+import { ReactComponent as RightArrow } from 'icons/right-arrow.svg'
+import { ReactComponent as LeftArrow } from 'icons/left-arrow.svg'
 
 function Page1({ handleNextClick }) {
   return (

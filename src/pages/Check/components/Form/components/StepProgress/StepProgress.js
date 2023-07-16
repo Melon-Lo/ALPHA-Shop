@@ -1,25 +1,25 @@
 import styles from './StepProgress.module.css'
 
-export default function StepProgress() {
+export default function StepProgress({ step }) {
   return (
-    <section className={styles.stepProgressContainer}>
-      <div className={styles.progressStep}>
-        <span className={styles.progressIcon}>
-          <span className={styles.progressText}>1</span>
+    <section className="stepProgressContainer">
+      <div className="progressStep">
+        <span className={step === 1 ? "activeIcon" : "progressIcon"}>
+          <span className={step === 1 ? "activeText" : "progressText"}>1</span>
         </span>
-        <span className={styles.progressLabel}>寄送地址</span>
+        <span className={step === 1 ? "activeLabel" : "progressLabel"}>寄送地址</span>
       </div>
-      <div className={styles.progressStep}>
-        <span className={styles.progressIcon}>
-          <span className={styles.progressText}>2</span>
+      <div className="progressStep">
+        <span className={step === 2 ? "activeIcon" : "progressIcon"}>
+          <span className={step === 2 ? "activeText" : "progressText"}>2</span>
         </span>
-        <span className={styles.progressLabel}>運送方式</span>
+        <span className={step === 2 ? "activeLabel" : "progressLabel"}>運送方式</span>
       </div>
-      <div className={styles.progressStep}>
-        <span className={styles.progressIcon}>
-          <span className={styles.progressText}>3</span>
+      <div className="progressStep">
+        <span className={step === 3 ? "activeIcon" : "progressIcon"}>
+          <span className={step === 3 ? "activeText" : "progressText"}>3</span>
         </span>
-        <span className={styles.progressLabel}>付款資訊</span>
+        <span className={step === 3 ? "activeLabel" : "progressLabel"}>付款資訊</span>
       </div>
     </section>
   )
