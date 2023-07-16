@@ -49,8 +49,9 @@
   width: 60%;
 }
 
-/* .controlButton {
-} */
+.controlButton {
+  cursor: pointer;
+}
 
 .productCount {
   display: flex;

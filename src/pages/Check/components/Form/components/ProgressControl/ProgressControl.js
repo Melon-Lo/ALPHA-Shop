@@ -3,6 +3,57 @@ import { ReactComponent as LeftArrow } from '../../../../../../icons/left-arrow.
 import styles from './ProgressControl.module.css'
 import { useState } from 'react'
 
+function Page1({ handleNextClick }) {
+  return (
+    <>
+      <button 
+        className={styles.next}
+        onClick={handleNextClick}>
+        下一步
+        <RightArrow className={styles.stepButton} />
+      </button>
+    </>
+  )
+}
+
+function Page2({ handleNextClick, handlePreviousClick }) {
+  return (
+    <>
+      <button 
+        className={styles.previous}
+        onClick={handlePreviousClick}>
+        <LeftArrow className={styles.stepButton} />
+        上一步
+      </button>
+      <button 
+        className={styles.next}
+        onClick={handleNextClick}>
+        下一步
+        <RightArrow className={styles.stepButton} />
+      </button>
+    </>
+  )
+}
+
+function Page3({ handlePreviousClick }) {
+  return (
+    <>
+      <button 
+        className={styles.previous}
+        onClick={handlePreviousClick}>
+        <LeftArrow className={styles.stepButton} />
+        上一步
+      </button>
+      <button 
+        className={styles.next}>
+        完成訂單
+      </button>
+    </>
+  )
+}
+
+
+
 export default function ProgressControl({ step, setStep }) {
 
   function handlePreviousClick() {
@@ -24,18 +75,9 @@ export default function ProgressControl({ step, setStep }) {
   return(
     <section className={styles.progressControlContainer}>
       <div className={styles.buttonGroup}>
-        <button 
-          className={styles.previous}
-          onClick={handlePreviousClick}>
-          <LeftArrow className={styles.stepButton} />
-          上一步
-        </button>
-        <button 
-          className={styles.next}
-          onClick={handleNextClick}>
-          下一步
-          <RightArrow className={styles.stepButton} />
-        </button>
+        {step === 1 && <Page1 handleNextClick={handleNextClick}/>}
+        {step === 2 && <Page2 handleNextClick={handleNextClick} handlePreviousClick={handlePreviousClick}/>}
+        {step === 3 && <Page3 handleNextClick={handleNextClick} handlePreviousClick={handlePreviousClick}/>}
       </div>
     </section>
   )

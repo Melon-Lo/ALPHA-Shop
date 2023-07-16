@@ -15,27 +15,35 @@
 }
 
 .buttonGroup {
+  position: relative;
   width: 80%;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
 }
 
-.previous {
+.button-setting {
+  position: absolute;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 6rem;
   height: 2.5rem;
-  background-color: transparent;
   border: none;
-  color: rgb(74, 74, 74);
   font-weight: 1000;
   border-radius: 8px;
   cursor: pointer;
 }
 
+.previous {
+  composes: button-setting;
+  left: 0;
+  background-color: transparent;
+  color: rgb(74, 74, 74);
+}
+
 .next {
-  composes: previous;
+  composes: button-setting;
+  right: 0;
   background-color: #fd63ab;
   color: rgb(255, 255, 255);
 }
