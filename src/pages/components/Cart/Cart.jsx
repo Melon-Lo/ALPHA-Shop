@@ -1,10 +1,10 @@
 import styles from './Cart.module.css'
 import itemsData from './itemsData'
-import { ReactComponent as PlusButton } from '../../../../icons/plus.svg'
-import { ReactComponent as MinusButton } from '../../../../icons/minus.svg'
+import { ReactComponent as PlusButton } from 'assets/icons/plus.svg'
+import { ReactComponent as MinusButton } from 'assets/icons/minus.svg'
 import { useState } from 'react'
 
-function ProductList({ id, name, image, price, totalPlus, totalMinus }) {
+function ProductList({ id, name, img, price, totalPlus, totalMinus }) {
 
   const [quantity, setQuantity] = useState(0)
 
@@ -23,7 +23,7 @@ function ProductList({ id, name, image, price, totalPlus, totalMinus }) {
   return (
     <section className={styles.productContainer} key={id} >
       <div className={styles.productItem}>
-        <img src={image} alt={name} className={styles.imgContainer}/>
+        <img src={img} alt={name} className={styles.imgContainer}/>
         <div className={styles.productInfo}>
           <p className={styles.productName}>{name}</p>
           <div className={styles.productControl}>
@@ -64,7 +64,7 @@ export default function Cart() {
         {itemsData.map((item) => (
         <ProductList
           key = {item.id}
-          image = {item.img}
+          img = {item.img}
           price = {item.price}
           name = {item.name}
           quantity = {item.quantity}

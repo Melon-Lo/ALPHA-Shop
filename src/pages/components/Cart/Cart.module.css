@@ -14,6 +14,7 @@
 
 .productList {
   display: flex;
+  height: 50%;
   flex-direction: column;
   align-items: center;
   margin: 0.5rem 0;
@@ -50,6 +51,7 @@
 .productName {
   margin: 0.2rem 0;
   font-size: 1rem;
+  white-space: nowrap;
 }
 
 .productControl {
