@@ -2,6 +2,7 @@
   display: flex;
   width: 100%;
   height: 60px;
+  margin: 1rem 0;
 }
 
 .navBar {
@@ -14,8 +15,7 @@
 
 .navLink {
   all: unset;
-  margin: 0.2rem;
-  font-size: 0.8rem;
+  margin: 0 0.5rem;
   white-space: nowrap;
   color: rgb(85, 85, 85);;
   cursor: pointer;
