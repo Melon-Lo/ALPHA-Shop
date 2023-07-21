@@ -1,0 +1,53 @@
+.headerContainer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 5px 5px rgb(233, 233, 233);
+  box-sizing: border-box;
+}
+
+.navBar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0 2.5rem;
+  width: 25%;
+}
+
+.navLink {
+  all: unset;
+  margin: 0 0.5rem;
+  white-space: nowrap;
+  color: rgb(85, 85, 85);
+  cursor: pointer;
+}
+
+.logoBox {
+  width: 30%;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+.logo {
+  height: 100%;
+  width: 100%;
+}
+
+.functionBox {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: 0 0.5rem;
+  width: 25%;
+}
+
+.function {
+  margin: 0 1rem;
+  stroke: rgb(0, 0, 0);
+  fill: rgb(0, 0, 0);
+  cursor: pointer;
+}

@@ -1,0 +1,68 @@
+.stepThreeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.creditCard {
+  width: 80%;
+}
+
+.formTitle {
+  margin: 1rem 0;
+}
+
+.inputContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+  grid-template-areas:
+    'creditName creditName creditName creditName .'
+    'creditNumber creditNumber creditNumber creditNumber .'
+    'expiredDate expiredDate expiredDate CVC CVC';
+}
+
+.inputSet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 0;
+  padding: 0.2rem 0;
+}
+
+.creditName {
+  grid-area: creditName;
+  composes: inputSet;
+}
+
+.creditNumber {
+  grid-area: creditNumber;
+  composes: inputSet;
+}
+
+.expiredDate {
+  grid-area: expiredDate;
+  composes: inputSet;
+}
+
+.CVC {
+  grid-area: CVC;
+  composes: inputSet;
+}
+
+.inputLabel {
+  composes: inputSet;
+  color: rgb(70, 70, 70);
+  font-size: 0.8rem;
+}
+
+.inputBox {
+  composes: inputSet;
+  width: 100%;
+  height: 1.5rem;
+}
