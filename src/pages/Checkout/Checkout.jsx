@@ -10,10 +10,7 @@ export default function Checkout() {
   return(
     <section
       className={styles.checkSection}
-      style={{
-        background: theme.background,
-        color: theme.fontColor,
-      }}
+      style={theme.checkout.checkoutStyle}
     >
       <h1 className={styles.checkTitle}>結帳</h1>
       <div className={styles.checkContainer}>

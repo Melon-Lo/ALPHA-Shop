@@ -17,9 +17,22 @@ export const FormContext = createContext()
 
 export default function FormContextProvider({children}) {
   const [Info, setInfo] = useState(blankInfo)
+  const [step, setStep] = useState(1)
 
   function inputChange(e) {
     setInfo({...Info, [e.target.name]: e.target.value})
+  }
+
+  function handlePreviousClick() {
+    if(step > 1) {
+      setStep(step - 1)
+    }
+  }
+
+  function handleNextClick() {
+    if(step < 3) {
+      setStep(step + 1)
+    }
   }
 
   function submitForm() {
@@ -30,8 +43,12 @@ export default function FormContextProvider({children}) {
   return (
     <FormContext.Provider
       value={{ 
+        step,
+        setStep,
         inputChange,
-        submitForm
+        submitForm,
+        handleNextClick,
+        handlePreviousClick
       }}
     >
       {children}

@@ -10,7 +10,7 @@ export default function Form() {
 
   return (
     <section className={styles.formContainer}>
-      <StepProgress step={step}/>
+      <StepProgress />
       <AllSteps step={step} />
       <ProgressControl step={step} setStep={setStep}/>
     </section>

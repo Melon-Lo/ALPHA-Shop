@@ -14,6 +14,15 @@ const themes = {
         stroke: "#000000"
       }
     },
+    checkout: {
+      checkoutStyle: {
+        background: "#FFFFFF",
+        color: "#000000",
+      },
+      labelStyle: {
+        color: "rgb(149, 149, 149)"
+      },
+    }
   },
   dark: {
     name: 'dark',
@@ -27,6 +36,15 @@ const themes = {
         fill: "#FFFFFF",
         stroke: "#FFFFFF"
       }
+    },
+    checkout: {
+      checkoutStyle: {
+        background: "#121212",
+        color: "#FFFFFF",
+      },
+      labelStyle: {
+        color: "#FFFFFF"
+      },
     },
     cartBackGround: "#383838",
     footerBackGround: "#333333",

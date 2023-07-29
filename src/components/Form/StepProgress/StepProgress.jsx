@@ -1,7 +1,10 @@
 import styles from './StepProgress.module.css'
+import { useContext } from 'react'
+import { FormContext } from 'context/FormContext'
 
-
-export default function StepProgress({ step }) {
+export default function StepProgress() {
+  const { step } = useContext(FormContext)
+  
   function ProgressStep({ currentStep, label }) {
     return (
       <div className="progressStep">

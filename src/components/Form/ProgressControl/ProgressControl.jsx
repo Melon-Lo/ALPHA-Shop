@@ -15,20 +15,10 @@ function Button({ className, onClick, text}) {
   )
 }
 
-function Step({ step, setStep }) {
+function Step() {
+  const { step, handleNextClick, handlePreviousClick } = useContext(FormContext)
+
   const { submitForm } = useContext(FormContext)
-
-  function handlePreviousClick() {
-    if(step > 1) {
-      setStep(step - 1)
-    }
-  }
-
-  function handleNextClick() {
-    if(step < 3) {
-      setStep(step + 1)
-    }
-  }
 
   if(step === 1) {
     return (
@@ -66,7 +56,9 @@ function Step({ step, setStep }) {
   }
 }
 
-export default function ProgressControl({ step, setStep }) {
+export default function ProgressControl() {
+  const { step, setStep } = useContext(FormContext)
+
   return(
     <section className={styles.progressControlContainer}>
       <div className={styles.buttonGroup}>
