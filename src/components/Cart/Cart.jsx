@@ -6,7 +6,7 @@ import { CartContext } from 'context/CartContext'
 import { ShippingContext } from 'context/ShippingContext'
 
 function ProductList() {
-  const { currentItems, handleClick, setCalc } = useContext(CartContext)
+  const { currentItems, handlePlusClick, handleMinusClick } = useContext(CartContext)
 
   const totalItems = currentItems.map(item => (
     <section className={styles.productContainer} key={item.id} >
@@ -17,20 +17,14 @@ function ProductList() {
           <div className={styles.productControl}>
             <MinusButton 
               className={styles.controlButton}
-              onClick={() =>{
-                handleClick(item.id)
-                setCalc(-1)
-              }}
+              onClick={() =>handleMinusClick(item.id)}
             />
             <span className={styles.productCount}>
               {item.quantity}
             </span>
             <PlusButton 
               className={styles.controlButton} 
-              onClick={() =>{
-                handleClick(item.id)
-                setCalc(1)
-              }}
+              onClick={() =>handlePlusClick(item.id)}
             />
           </div>
         </div>

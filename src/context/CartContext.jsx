@@ -4,7 +4,6 @@ export const CartContext = createContext()
 
 export function CartContextProvider({ children }) {
   const [currentItems, setCurrentItems] = useState(initailData)
-  const [calc, setCalc] = useState('')
 
   let itemTotal = []
   currentItems.map(item => {
@@ -15,13 +14,28 @@ export function CartContextProvider({ children }) {
     return accumulator + currenValue
   })
 
-  function handleClick(id) {
+  function handlePlusClick(id) {
     setCurrentItems(
       currentItems.map(item => {
         if(item.id === id) {
           return {
             ...item,
-            quantity: item.quantity + Number(calc)
+            quantity: item.quantity + 1
+          }
+        } else {
+          return item
+        }
+      })
+    )
+  }
+
+  function handleMinusClick(id) {
+    setCurrentItems(
+      currentItems.map(item => {
+        if(item.id === id && item.quantity > 0) {
+          return {
+            ...item,
+            quantity: item.quantity - 1
           }
         } else {
           return item
@@ -36,8 +50,8 @@ export function CartContextProvider({ children }) {
         currentItems,
         setCurrentItems,
         total,
-        handleClick,
-        setCalc
+        handlePlusClick,
+        handleMinusClick
       }}
     >
       {children}
