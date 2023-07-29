@@ -1,6 +1,6 @@
 import styles from './Checkout.module.css'
-import Form from "../components/Form/Form"
-import Cart from '../../components/Cart/Cart'
+import Form from 'components/Form/Form'
+import Cart from 'components/Cart/Cart'
 
 export default function Checkout() {
   return(

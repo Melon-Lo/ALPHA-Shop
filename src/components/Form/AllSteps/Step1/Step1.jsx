@@ -1,5 +1,5 @@
 import styles from './Step1.module.css'
-import cityData from '../cityData'
+import cityData from './cityData'
 import { useContext } from 'react'
 import { FormContext } from 'context/FormContext'
 
@@ -62,7 +62,6 @@ export default function Step1() {
             <p className={styles.inputLabel}>縣市</p>
             <div className={styles.selectorContainer}>
               <select
-                value="true"
                 name="city"
                 className={styles.optionBox}
                 onChange={(e) => inputChange(e)}
