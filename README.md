@@ -1,6 +1,7 @@
 # Melon's Alpha Shop
 
 ![Cover image](https://github.com/Melon-Lo/ALPHA-Shop/blob/main/cover.png?raw=true)
+![Cover Dark image](https://github.com/Melon-Lo/ALPHA-Shop/blob/main/cover_dark.png?raw=true)
 
 ### Introduction
 
