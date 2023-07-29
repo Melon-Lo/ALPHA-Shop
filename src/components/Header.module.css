@@ -1,6 +1,7 @@
 .headerContainer {
   position: fixed;
   top: 0;
+<<<<<<< HEAD
   width: 100%;
   height: 60px;
   display: flex;
@@ -8,14 +9,26 @@
   background-color: #fff;
   box-shadow: 0 5px 5px rgb(233, 233, 233);
   box-sizing: border-box;
+=======
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 0 5px 5px rgb(233, 233, 233);
+>>>>>>> ed6e7d3f8deb93db53088b5f584b2d5bb6d5453c
 }
 
 .navBar {
   display: flex;
   justify-content: start;
   align-items: center;
+<<<<<<< HEAD
   margin: 0 2.5rem;
   width: 25%;
+=======
+  margin-left: 1rem;
+  width: 30%;
+>>>>>>> ed6e7d3f8deb93db53088b5f584b2d5bb6d5453c
 }
 
 .navLink {
@@ -27,7 +40,11 @@
 }
 
 .logoBox {
+<<<<<<< HEAD
   width: 30%;
+=======
+  width: 40%;
+>>>>>>> ed6e7d3f8deb93db53088b5f584b2d5bb6d5453c
   margin: 0.5rem 0;
   cursor: pointer;
 }
@@ -41,8 +58,13 @@
   display: flex;
   justify-content: end;
   align-items: center;
+<<<<<<< HEAD
   margin: 0 0.5rem;
   width: 25%;
+=======
+  margin-right: 1rem;
+  width: 30%;
+>>>>>>> ed6e7d3f8deb93db53088b5f584b2d5bb6d5453c
 }
 
 .function {

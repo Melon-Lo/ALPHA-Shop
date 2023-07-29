@@ -1,6 +1,11 @@
 .formContainer {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   width: 40%;
   height: 100%;
+=======
+  width: 45%;
+  height: 800px;
+>>>>>>> ed6e7d3f8deb93db53088b5f584b2d5bb6d5453c
 }

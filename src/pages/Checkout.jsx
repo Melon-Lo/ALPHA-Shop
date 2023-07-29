@@ -14,5 +14,9 @@ export default function Checkout() {
         <Cart total={total} setTotal={setTotal}/>
       </div>
     </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> ed6e7d3f8deb93db53088b5f584b2d5bb6d5453c
   )
 }

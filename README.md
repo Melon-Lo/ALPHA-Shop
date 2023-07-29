@@ -1,6 +1,10 @@
 # Melon's Alpha Shop
 
+<<<<<<< HEAD
 ![Cover image](https://github.com/Melon-Lo/ALPHA-Shop/blob/desktop/cover.png?raw=true)
+=======
+![Cover image](https://github.com/Melon-Lo/ALPHA-Shop/blob/main/cover.png?raw=true)
+>>>>>>> ed6e7d3f8deb93db53088b5f584b2d5bb6d5453c
 
 ### Introduction
 
@@ -28,4 +32,7 @@ On this webpage, you can freely choose the products you want! Still want to hesi
 1. Node.js@14.16.0
 2. npm@6.14.11
 3. react@18.2.0
+<<<<<<< HEAD
 
+=======
+>>>>>>> ed6e7d3f8deb93db53088b5f584b2d5bb6d5453c

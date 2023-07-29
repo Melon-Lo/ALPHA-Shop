@@ -1,5 +1,8 @@
 .checkSection {
+<<<<<<< HEAD
   width: 100%;
+=======
+>>>>>>> ed6e7d3f8deb93db53088b5f584b2d5bb6d5453c
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,9 +13,13 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+<<<<<<< HEAD
   height: 550px;
   width: 100%;
   margin-bottom: 5rem;
+=======
+  width: 100%;
+>>>>>>> ed6e7d3f8deb93db53088b5f584b2d5bb6d5453c
 }
 
 .checkTitle {

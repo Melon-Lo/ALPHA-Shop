@@ -1,4 +1,8 @@
 .footerContainer {
+<<<<<<< HEAD
+=======
+  /* border: 1px solid red; */
+>>>>>>> ed6e7d3f8deb93db53088b5f584b2d5bb6d5453c
   display: flex;
   justify-content: center;
   align-items: start;
@@ -16,6 +20,10 @@
 }
 
 .footerSection {
+<<<<<<< HEAD
+=======
+  /* border: 1px solid red; */
+>>>>>>> ed6e7d3f8deb93db53088b5f584b2d5bb6d5453c
   width: 10%;
   margin: 0 1rem;
 }
