@@ -8,13 +8,7 @@ import { ThemeContext } from 'context/ThemeContext';
 export default function App() {
   const { theme } = useContext(ThemeContext)
   return (
-    <div 
-      className="app"
-      style={{
-        color: theme.foreground,
-        backgroundColor: theme.background
-      }}
-    >
+    <div className="app">
       <Header />
       <Checkout />
       <Footer />

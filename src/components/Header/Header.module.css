@@ -5,8 +5,6 @@
   height: 60px;
   display: flex;
   justify-content: space-between;
-  background-color: #fff;
-  box-shadow: 0 5px 5px rgb(233, 233, 233);
   box-sizing: border-box;
 }
 
@@ -22,7 +20,6 @@
   all: unset;
   margin: 0 0.5rem;
   white-space: nowrap;
-  color: rgb(85, 85, 85);
   cursor: pointer;
 }
 
@@ -47,7 +44,5 @@
 
 .function {
   margin: 0 1rem;
-  stroke: rgb(0, 0, 0);
-  fill: rgb(0, 0, 0);
   cursor: pointer;
 }

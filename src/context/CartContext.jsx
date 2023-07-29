@@ -39,8 +39,6 @@ export function CartContextProvider({ children }) {
         currentItems,
         setCurrentItems,
         total,
-        // handlePlusClick,
-        // handleMinusClick,
         handleClick
       }}
     >
