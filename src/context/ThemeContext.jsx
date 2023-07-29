@@ -63,7 +63,11 @@ export default function ThemeProvider({ children }) {
 
   return (
     <ThemeContext.Provider
-      value={{ theme, toggleTheme }}
+      value={{ 
+        theme, 
+        toggleTheme, 
+        dark 
+      }}
     >
       {children}
     </ThemeContext.Provider>

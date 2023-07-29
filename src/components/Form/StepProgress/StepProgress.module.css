@@ -35,14 +35,6 @@
   word-wrap: nowrap;
 }
 
-:global(.progressLabel) {
-  display: flex;
-  align-items: center;
-  color: gray;
-  font-size: 0.7rem;
-  white-space: nowrap;
-}
-
 /* active */
 
 :global(.activeIcon) {
@@ -68,11 +60,28 @@
   word-wrap: nowrap;
 }
 
-:global(.activeLabel) {
+:global(.lightActive) {
   display: flex;
   align-items: center;
   color: rgb(0, 0, 0);
   font-size: 0.7rem;
   font-weight: 800;
+  white-space: nowrap;
+}
+
+:global(.darkActive) {
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-size: 0.7rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+:global(.notActive) {
+  display: flex;
+  align-items: center;
+  color: gray;
+  font-size: 0.7rem;
   white-space: nowrap;
 }
