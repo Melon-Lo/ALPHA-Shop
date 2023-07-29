@@ -12,34 +12,20 @@ export function CartContextProvider({ children }) {
     itemTotal.push(item.price * item.quantity)
   })
   itemTotal.push(shipping)
-
   const total = itemTotal.reduce((accumulator, currenValue) => {
     return accumulator + currenValue
   })
 
-  function handlePlusClick(id) {
+  function handleClick(id, calc) {
     setCurrentItems(
       currentItems.map(item => {
         if(item.id === id) {
-          return {
-            ...item,
-            quantity: item.quantity + 1
+          if(calc === 1) {
+            item.quantity++
+          } else if(calc === -1 && item.quantity > 0) {
+            item.quantity--
           }
-        } else {
           return item
-        }
-      })
-    )
-  }
-
-  function handleMinusClick(id) {
-    setCurrentItems(
-      currentItems.map(item => {
-        if(item.id === id && item.quantity > 0) {
-          return {
-            ...item,
-            quantity: item.quantity - 1
-          }
         } else {
           return item
         }
@@ -53,8 +39,9 @@ export function CartContextProvider({ children }) {
         currentItems,
         setCurrentItems,
         total,
-        handlePlusClick,
-        handleMinusClick
+        // handlePlusClick,
+        // handleMinusClick,
+        handleClick
       }}
     >
       {children}
