@@ -1,7 +1,7 @@
 import './App.css';
-import Header from 'components/Header';
-import Checkout from 'pages/Checkout';
-import Footer from 'components/Footer';
+import Header from 'components/Header/Header';
+import Checkout from 'pages/Checkout/Checkout';
+import Footer from 'components/Footer/Footer';
 import { useContext } from 'react';
 import { ThemeContext } from 'context/ThemeContext';
 
