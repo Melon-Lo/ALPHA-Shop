@@ -2,21 +2,22 @@ import './App.css';
 import Header from 'components/Header';
 import Checkout from 'pages/Checkout';
 import Footer from 'components/Footer';
+import { useContext } from 'react';
+import { ThemeContext } from 'context/ThemeContext';
 
 export default function App() {
+  const { theme } = useContext(ThemeContext)
   return (
-<<<<<<< HEAD
-    <div class="app">
+    <div 
+      className="app"
+      style={{
+        color: theme.foreground,
+        backgroundColor: theme.background
+      }}
+    >
       <Header />
       <Checkout />
       <Footer />
     </div>
-=======
-    <>
-      <Header />
-      <Checkout />
-      <Footer />
-    </>
->>>>>>> ed6e7d3f8deb93db53088b5f584b2d5bb6d5453c
   );
 }

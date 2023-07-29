@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   margin: 0;
   padding: 0.2rem 0;
 }
@@ -66,7 +66,6 @@
 
 .inputLabel {
   composes: inputSet;
-  color: rgb(70, 70, 70);
   font-size: 0.8rem;
 }
 

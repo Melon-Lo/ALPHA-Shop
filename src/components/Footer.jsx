@@ -3,7 +3,6 @@ import { ReactComponent as Logo } from 'assets/icons/logo_s.svg'
 import { ReactComponent as Facebook } from 'assets/icons/facebook.svg'
 import { ReactComponent as Instagram } from 'assets/icons/instagram.svg'
 import { ReactComponent as Whatsapp } from 'assets/icons/whatsapp.svg'
-<<<<<<< HEAD
 import linksData from './linksData'
 
 export default function Footer() {
@@ -11,11 +10,11 @@ export default function Footer() {
   function LinkSection() {
     return (
       linksData.map(item => (
-        <section className={styles.footerSection}>
+        <section className={styles.footerSection} key={item.id}>
           <h2 className={styles.sectionTitle}>{item.title}</h2>
           <div className={styles.sectionContent}>
             {item.links.map(link => (
-              <a className={styles.pageLink} href={link.href}>{link.title}</a>
+              <a className={styles.pageLink} href={link.href} key={link.id}>{link.title}</a>
             ))}
           </div>
         </section> 
@@ -23,10 +22,6 @@ export default function Footer() {
     )
   }
 
-=======
-
-export default function Footer() {
->>>>>>> ed6e7d3f8deb93db53088b5f584b2d5bb6d5453c
   return (
     <footer className={styles.footerContainer}>
       <section className={styles.footerLogoSection}>
@@ -34,35 +29,7 @@ export default function Footer() {
           <Logo className={styles.alphaLogo}/>
         </div>
       </section>
-<<<<<<< HEAD
       <LinkSection />
-=======
-      <section className={styles.footerSection}>
-        <h2 className={styles.sectionTitle}>客戶服務</h2>
-        <div className={styles.sectionContent}>
-          <a className={styles.pageLink} href="">運送說明</a>
-          <a className={styles.pageLink} href="">退換貨相關</a>
-          <a className={styles.pageLink} href="">付款資訊</a>
-          <a className={styles.pageLink} href="">FAQ</a>
-        </div>
-      </section>
-      <section className={styles.footerSection}>
-        <h2 className={styles.sectionTitle}>關於我們</h2>
-        <div className={styles.sectionContent}>
-          <a className={styles.pageLink} href="">品牌故事</a>
-          <a className={styles.pageLink} href="">媒體聯繫</a>
-          <a className={styles.pageLink} href="">Press Kit</a>
-        </div>
-      </section>
-      <section className={styles.footerSection}>
-        <h2 className={styles.sectionTitle}>資訊</h2>
-        <div className={styles.sectionContent}>
-          <a className={styles.pageLink} href="">隱私權政策</a>
-          <a className={styles.pageLink} href="">Cookie</a>
-          <a className={styles.pageLink} href="">GDPR</a>
-        </div>
-      </section>
->>>>>>> ed6e7d3f8deb93db53088b5f584b2d5bb6d5453c
       <section className={styles.footerSection}>
         <h2 className={styles.sectionTitle}>追蹤 ALPHA Shop</h2>
         <div className={styles.telInfo}>+886 02123-45678</div>

@@ -4,11 +4,7 @@
   display: flex;
   flex-direction: column;
   width: 40%;
-<<<<<<< HEAD
   height: 100%;
-=======
-  max-height: 680px;
->>>>>>> ed6e7d3f8deb93db53088b5f584b2d5bb6d5453c
   padding: 0.8rem;
   border: 1px solid rgb(205, 205, 205);
   border-radius: 10px;
