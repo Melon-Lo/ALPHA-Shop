@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { ShippingContext } from 'context/ShippingContext'
 
 export default function Step2() {
-  const { handleShipping } = useContext(ShippingContext)
+  const { setShipping } = useContext(ShippingContext)
 
   return (
     <section className={styles.stepTwoContainer}>
@@ -16,7 +16,7 @@ export default function Step2() {
               type="radio"
               name="shipping"
               defaultChecked="checked"
-              onClick={() => handleShipping(0)}
+              onClick={() => setShipping(0)}
             />
             <div className={styles.infoBox}>
               <div className={styles.info}>
@@ -32,7 +32,7 @@ export default function Step2() {
               id="shipping-dhl"
               type="radio"
               name="shipping" 
-              onClick={() => handleShipping(500)}
+              onClick={() => setShipping(500)}
             />
             <div className={styles.infoBox}>
               <div className={styles.info}>

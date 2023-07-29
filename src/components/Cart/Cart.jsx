@@ -35,38 +35,8 @@ function ProductList({ items, totalPlus, totalMinus }) {
 }
 
 export default function Cart() {
-  const { currentItems, setCurrentItems, calcTotal } = useContext(CartContext)
+  const { currentItems, setCurrentItems, total, handlePlusClick, handleMinusClick } = useContext(CartContext)
   const { shipping } = useContext(ShippingContext)
-
-  function handlePlusClick(id) {
-    setCurrentItems(
-      currentItems.map(item => {
-        if(item.id === id) {
-          return {
-            ...item,
-            quantity: item.quantity + 1
-          }
-        } else {
-          return item
-        }
-      })
-    )
-  }
-
-  function handleMinusClick(id) {
-    setCurrentItems(
-      currentItems.map(item => {
-        if(item.id === id && item.quantity > 0) {
-          return {
-            ...item,
-            quantity: item.quantity - 1
-          }
-        } else {
-          return item
-        }
-      })
-    )
-  }
 
   return (
     <section className={styles.cartContainer}>
@@ -88,7 +58,7 @@ export default function Cart() {
         </section>
         <section className={styles.cartInfo}>
           <div className={styles.text}>小計</div>
-          <div className={styles.cartPrice}>${calcTotal()}</div>
+          <div className={styles.cartPrice}>${total}</div>
         </section>
       </section>
     </section>
