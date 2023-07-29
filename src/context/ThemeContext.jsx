@@ -3,23 +3,33 @@ import { useState, createContext } from 'react'
 const themes = {
   light: {
     name: 'light',
-    fontColor: "#000000",
-    background: "#FFFFFF",
-    headerLinkFontColor: "rgb(85, 85, 85)",
-    headerShadow: "0 5px 5px rgb(233, 233, 233)",
-    iconFill: "#000000",
-    iconStroke: "#000000"
+    header: {
+      headerStyle: {
+        background: "#FFFFFF",
+        color: "rgb(85, 85, 85)",
+        boxShadow: "0 5px 5px rgb(233, 233, 233)",
+      },
+      iconStyle: {
+        fill: "#000000",
+        stroke: "#000000"
+      }
+    },
   },
   dark: {
     name: 'dark',
-    fontColor: "#FFFFFF",
-    background: "#121212",
-    headerLinkFontColor: "#FFFFFF",
-    headerShadow: "0 5px 5px #000000",
+    header: {
+      headerStyle: {
+        background: "#121212",
+        color: "#FFFFFF",
+        boxShadow: "0 5px 5px #000000",
+      },
+      iconStyle: {
+        fill: "#FFFFFF",
+        stroke: "#FFFFFF"
+      }
+    },
     cartBackGround: "#383838",
     footerBackGround: "#333333",
-    iconFill: "#FFFFFF",
-    iconStroke: "#FFFFFF"
   }
 };
 

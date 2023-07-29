@@ -5,7 +5,13 @@ export default function StepProgress({ step }) {
   function ProgressStep({ currentStep, label }) {
     return (
       <div className="progressStep">
-        <span className={step === currentStep ? "activeIcon" : "progressIcon"}>
+        <span 
+          className= { 
+            step === currentStep ?
+            "activeIcon" :
+            "progressIcon"
+          }
+        >
           <span className={step === currentStep ? "activeText" : "progressText"}>{currentStep}</span>
         </span>
         <span className={step === currentStep ? "activeLabel" : "progressLabel"}>{label}</span>

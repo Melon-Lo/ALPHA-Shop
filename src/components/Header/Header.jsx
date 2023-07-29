@@ -14,12 +14,7 @@ export default function Header() {
   return (
     <header 
       className={styles.headerContainer}
-      style={{
-        color: theme.fontColor,
-        backgroundColor: theme.background,
-        boxShadow: theme.headerShadow,
-        fill: theme.iconFill
-      }}
+      style={theme.header.headerStyle}
     >
       <nav className={styles.navBar}>
         <a className={styles.navLink} href="">男款</a>
@@ -31,39 +26,28 @@ export default function Header() {
       <a className={styles.logoBox} href="">
         <Logo 
           className={styles.logo}
+          style={theme.header.iconStyle}
         />
       </a>
       <div className={styles.functionBox}>
         <Search 
           className={styles.function} 
-          style={{ 
-            fill: theme.iconFill,
-            stroke: theme.iconStroke
-          }}
+          style={theme.header.iconStyle}
         />
         <Cart 
           className={styles.function} 
-          style={{ 
-            fill: theme.iconFill,
-            stroke: theme.iconStroke
-          }}
+          style={theme.header.iconStyle}
         />
         { theme.name === 'dark' ? 
           <Sun 
             className= {styles.function} 
             onClick={toggleTheme}
-            style={{ 
-              fill: theme.iconFill,
-              stroke: theme.iconStroke
-            }} 
+            style={theme.header.iconStyle} 
           /> : 
           <Moon 
             className={styles.function} 
             onClick={toggleTheme}
-            style={{ 
-              fill: theme.iconFill,
-              stroke: theme.iconStroke
-            }}  
+            style={theme.header.iconStyle} 
           /> 
         }
       </div>
