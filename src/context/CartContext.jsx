@@ -1,27 +1,10 @@
-import { createContext, useContext, useState } from "react";
-import { ShippingContext } from "./ShippingContext";
-
+import { createContext, useState } from "react";
+import initailData from "components/Cart/itemsData";
 export const CartContext = createContext()
-
-const initailData = [
-  {
-    id: '1',
-    name: '貓咪罐罐',
-    img: 'https://picsum.photos/300/300?text=1',
-    price: 100,
-    quantity: 2,
-  },
-  {
-    id: '2',
-    name: '貓咪干干',
-    img: 'https://picsum.photos/300/300?text=2',
-    price: 200,
-    quantity: 1,
-  },
-]
 
 export function CartContextProvider({ children }) {
   const [currentItems, setCurrentItems] = useState(initailData)
+  const [calc, setCalc] = useState('')
 
   let itemTotal = []
   currentItems.map(item => {
@@ -32,28 +15,13 @@ export function CartContextProvider({ children }) {
     return accumulator + currenValue
   })
 
-  function handlePlusClick(id) {
+  function handleClick(id) {
     setCurrentItems(
       currentItems.map(item => {
         if(item.id === id) {
           return {
             ...item,
-            quantity: item.quantity + 1
-          }
-        } else {
-          return item
-        }
-      })
-    )
-  }
-
-  function handleMinusClick(id) {
-    setCurrentItems(
-      currentItems.map(item => {
-        if(item.id === id && item.quantity > 0) {
-          return {
-            ...item,
-            quantity: item.quantity - 1
+            quantity: item.quantity + Number(calc)
           }
         } else {
           return item
@@ -68,8 +36,8 @@ export function CartContextProvider({ children }) {
         currentItems,
         setCurrentItems,
         total,
-        handlePlusClick,
-        handleMinusClick
+        handleClick,
+        setCalc
       }}
     >
       {children}

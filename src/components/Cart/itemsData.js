@@ -1,4 +1,4 @@
-const itemsData = [
+const initailData = [
   {
     id: '1',
     name: '貓咪罐罐',
@@ -15,4 +15,4 @@ const itemsData = [
   },
 ]
 
-export default itemsData
+export default initailData

@@ -5,8 +5,10 @@ import { useContext } from 'react'
 import { CartContext } from 'context/CartContext'
 import { ShippingContext } from 'context/ShippingContext'
 
-function ProductList({ items, totalPlus, totalMinus }) {
-  const totalItems = items.map(item => (
+function ProductList() {
+  const { currentItems, handleClick, setCalc } = useContext(CartContext)
+
+  const totalItems = currentItems.map(item => (
     <section className={styles.productContainer} key={item.id} >
       <div className={styles.productItem}>
         <img src={item.img} alt={item.name} className={styles.imgContainer}/>
@@ -15,14 +17,20 @@ function ProductList({ items, totalPlus, totalMinus }) {
           <div className={styles.productControl}>
             <MinusButton 
               className={styles.controlButton}
-              onClick={() =>totalMinus(item.id)}
+              onClick={() =>{
+                handleClick(item.id)
+                setCalc(-1)
+              }}
             />
             <span className={styles.productCount}>
               {item.quantity}
             </span>
             <PlusButton 
               className={styles.controlButton} 
-              onClick={() =>totalPlus(item.id)}
+              onClick={() =>{
+                handleClick(item.id)
+                setCalc(1)
+              }}
             />
           </div>
         </div>
@@ -35,19 +43,14 @@ function ProductList({ items, totalPlus, totalMinus }) {
 }
 
 export default function Cart() {
-  const { currentItems, setCurrentItems, total, handlePlusClick, handleMinusClick } = useContext(CartContext)
+  const { total } = useContext(CartContext)
   const { shipping } = useContext(ShippingContext)
 
   return (
     <section className={styles.cartContainer}>
       <h3 className={styles.cartTitle}>購物籃</h3>
       <section className={styles.productList}>
-      <ProductList
-        value = {{ currentItems, setCurrentItems }}
-        items={currentItems}
-        totalPlus={handlePlusClick}
-        totalMinus={handleMinusClick}
-      />
+      <ProductList />
       </section>
       <section className={styles.cartInfoContainer}>
         <section className={styles.cartInfo}>
@@ -63,5 +66,4 @@ export default function Cart() {
       </section>
     </section>
   )
-
 }
