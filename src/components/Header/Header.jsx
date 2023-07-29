@@ -26,7 +26,7 @@ export default function Header() {
       <a className={styles.logoBox} href="">
         <Logo 
           className={styles.logo}
-          style={theme.header.iconStyle}
+          // style={theme.header.iconStyle}
         />
       </a>
       <div className={styles.functionBox}>

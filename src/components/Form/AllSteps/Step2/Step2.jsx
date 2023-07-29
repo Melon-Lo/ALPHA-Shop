@@ -8,7 +8,7 @@ export default function Step2() {
   return (
     <section className={styles.stepTwoContainer}>
       <form action="submit" className={styles.form}>
-        <h3 className="formTitle">運送方式</h3>
+        <h3 className={styles.formTitle}>運送方式</h3>
         <div className={styles.inputContainer}>
           <label className={styles.radioGroup}data-price="0">
             <input 

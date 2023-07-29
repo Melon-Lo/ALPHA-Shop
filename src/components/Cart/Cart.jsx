@@ -4,12 +4,14 @@ import { ReactComponent as MinusButton } from 'assets/icons/minus.svg'
 import { useContext } from 'react'
 import { CartContext } from 'context/CartContext'
 import { ShippingContext } from 'context/ShippingContext'
+import { ThemeContext } from 'context/ThemeContext'
 
 function ProductList() {
   const { currentItems, handleClick } = useContext(CartContext)
+  const { theme } = useContext(ThemeContext)
 
   const totalItems = currentItems.map(item => (
-    <section className={styles.productContainer} key={item.id} >
+    <section className={styles.productContainer} key={item.id}>
       <div className={styles.productItem}>
         <img src={item.img} alt={item.name} className={styles.imgContainer}/>
         <div className={styles.productInfo}>
@@ -43,9 +45,13 @@ function ProductList() {
 export default function Cart() {
   const { total } = useContext(CartContext)
   const { shipping } = useContext(ShippingContext)
+  const { theme } = useContext(ThemeContext)
 
   return (
-    <section className={styles.cartContainer}>
+    <section 
+      className={styles.cartContainer}
+      style={theme.checkout.cartStyle}  
+    >
       <h3 className={styles.cartTitle}>購物籃</h3>
       <section className={styles.productList}>
       <ProductList />

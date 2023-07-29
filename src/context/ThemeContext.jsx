@@ -22,6 +22,22 @@ const themes = {
       labelStyle: {
         color: "rgb(149, 149, 149)"
       },
+      cartStyle: {
+        background: "#FFFFFF",
+      },
+    },
+    footer: {
+      footerStyle: {
+        background: "#e4e4e4",
+        color: "#000000",
+      },
+      iconStyle: {
+        fill: "#FFFFFF",
+        stroke: "#FFFFFF"
+      },
+      linkStyle: {
+        color: "rgb(85, 85, 85)"
+      }
     }
   },
   dark: {
@@ -45,9 +61,21 @@ const themes = {
       labelStyle: {
         color: "#FFFFFF"
       },
+      cartStyle: {
+        background: "#383838",
+      }
     },
-    cartBackGround: "#383838",
-    footerBackGround: "#333333",
+    footer: {
+      footerStyle: {
+        background: "#383838",
+      },
+      titleStyle: {
+        color: "#FFFFFF",
+      },
+      linkStyle: {
+        color: "#9E9E9E"
+      }
+    }
   }
 };
 

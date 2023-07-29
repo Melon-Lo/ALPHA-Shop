@@ -44,7 +44,7 @@
 .next {
   composes: button-setting;
   right: 0;
-  background-color: #fd63ab;
+  background-color: #F67599;
   color: rgb(255, 255, 255);
 }
 
