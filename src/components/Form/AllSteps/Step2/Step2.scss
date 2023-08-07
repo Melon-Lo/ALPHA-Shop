@@ -1,0 +1,56 @@
+@import 'src/styles/base';
+
+.stepTwoContainer {
+  display: flex;
+  @extend %centerCenter;
+  width: 100%;
+  margin: 1rem 0;
+
+  .form {
+    width: 80%;
+
+    .formTitle {
+      margin: 1rem 0;
+    }
+
+    .radioGroup {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+
+      .infoBox {
+        width: 80%;
+
+        .info {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+
+          .text {
+            font-weight: 600;
+          }
+
+          .price {
+            display: flex;
+            align-items: center;
+            font-size: 0.7rem;
+          }
+        }
+
+        .period {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

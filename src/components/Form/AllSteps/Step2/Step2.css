@@ -1,0 +1,38 @@
+.stepTwoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+.stepTwoContainer .form {
+  width: 80%;
+}
+.stepTwoContainer .form .formTitle {
+  margin: 1rem 0;
+}
+.stepTwoContainer .form .radioGroup {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.stepTwoContainer .form .radioGroup .infoBox {
+  width: 80%;
+}
+.stepTwoContainer .form .radioGroup .infoBox .info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.stepTwoContainer .form .radioGroup .infoBox .info .text {
+  font-weight: 600;
+}
+.stepTwoContainer .form .radioGroup .infoBox .info .price {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+}
+.stepTwoContainer .form .radioGroup .infoBox .period {
+  font-size: 0.7rem;
+}/*# sourceMappingURL=Step2.css.map */
