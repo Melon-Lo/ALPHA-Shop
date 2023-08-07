@@ -1,4 +1,4 @@
-import styles from './StepProgress.module.css'
+import './StepProgress.scss'
 import { useContext } from 'react'
 import { FormContext } from 'context/FormContext'
 import { ThemeContext } from 'context/ThemeContext'

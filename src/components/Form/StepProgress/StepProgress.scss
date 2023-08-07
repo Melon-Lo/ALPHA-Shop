@@ -1,0 +1,85 @@
+@import 'src/styles/base';
+
+%activeTheme {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.stepProgressContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+  .progressStep {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+    margin: 0.5rem;
+
+    .progressIcon {
+      display: flex;
+      @extend %centerCenter;
+      width: 1rem;
+      height: 1rem;
+      background-color: rgba(202, 202, 202, 0.5);
+      border: 1px solid rgb(199, 199, 199);
+      border-radius: 50%;
+    }
+
+    .progressText {
+      display: flex;
+      @extend %centerCenter;
+      width: 100%;
+      min-width: 20px;
+      height: 100%;
+      color: rgb(149, 149, 149);
+      font-size: 0.8rem;
+      word-wrap: nowrap;
+    }
+  }
+}
+
+// active setting
+
+.activeIcon {
+  display: flex;
+  @extend %centerCenter;
+  width: 1rem;
+  height: 1rem;
+  background-color: $black;
+  border: 1px solid $black;
+  border-radius: 50%;
+}
+
+.activeText {
+  display: flex;
+  @extend %centerCenter;
+  width: 100%;
+  min-width: 20px;
+  height: 100%;
+  color: $white;
+  font-size: 0.8rem;
+  word-wrap: nowrap;
+}
+
+.lightActive {
+  @extend %activeTheme;
+  color: $black;
+}
+
+.darkActive {
+  @extend %activeTheme;
+  color: $white;
+}
+
+.notActive {
+  display: flex;
+  align-items: center;
+  color: $gray;
+  font-size: 0.7rem;
+  white-space: nowrap;
+}

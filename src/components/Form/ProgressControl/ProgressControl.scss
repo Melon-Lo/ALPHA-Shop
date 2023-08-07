@@ -22,14 +22,14 @@
       @extend %btnSet;
       left: 0;
       background-color: transparent;
-      color: rgb(74, 74, 74);
+      color: $gray;
     }
 
     .next {
       @extend %btnSet;
       right: 0;
-      background-color: #F67599;
-      color: rgb(255, 255, 255);
+      background-color: $pink;
+      color: $white;
     }
   }
 }
@@ -37,5 +37,5 @@
 // icon set
 
 .icon {
-  fill: rgb(74, 74, 74);
+  fill: $gray;
 }
