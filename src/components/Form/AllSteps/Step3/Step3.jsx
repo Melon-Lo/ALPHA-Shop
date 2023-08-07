@@ -1,49 +1,49 @@
+import './Step3.scss'
 import { FormContext } from 'context/FormContext'
-import styles from './Step3.module.css'
 import { useContext } from 'react'
 
 export default function Step3() {
   const { inputChange } = useContext(FormContext)
 
   return (
-    <section className={styles.stepThreeContainer}>
-      <form action="submit" className={styles.creditCard}>
-        <h3 className={styles.formTitle}>付款資訊
+    <section className="stepThreeContainer">
+      <form action="submit" className="creditCard">
+        <h3 className="formTitle">付款資訊
         </h3>
-        <div className={styles.inputContainer}>
-          <div className={styles.creditName}>
-            <p className={styles.inputLabel}>持卡人姓名</p>
+        <div className="inputContainer">
+          <div className="creditName">
+            <p className="inputLabel">持卡人姓名</p>
             <input 
               name="cardOwner"
-              className={styles.inputBox} 
+              className="inputBox" 
               type="text" placeholder="請輸入姓名"
               onChange={(e) => inputChange(e)}
             />
           </div>
-          <div className={styles.creditNumber}>
-            <p className={styles.inputLabel}>卡號</p>
+          <div className="creditNumber">
+            <p className="inputLabel">卡號</p>
             <input
               name="cardNum"
-              className={styles.inputBox}
+              className="inputBox"
               type="text" 
               placeholder="請輸入卡號"
               onChange={(e) => inputChange(e)}
             />
           </div>
-          <div className={styles.expiredDate}>
-            <p className={styles.inputLabel}>有限期限</p>
+          <div className="expiredDate">
+            <p className="inputLabel">有限期限</p>
             <input  
               name="cardExpiredDate"
-              className={styles.inputBox}
+              className="inputBox"
               type="month"
               onChange={(e) => inputChange(e)}
             />
           </div>
-          <div className={styles.CVC}>
-            <p className={styles.inputLabel}>CVC / CCV</p>
+          <div className="CVC">
+            <p className="inputLabel">CVC / CCV</p>
             <input
               name="cardCvc"
-              className={styles.inputBox}
+              className="inputBox"
               type="number"
               onChange={(e) => inputChange(e)}
             />
