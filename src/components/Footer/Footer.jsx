@@ -1,4 +1,4 @@
-import styles from './Footer.module.css'
+import './Footer.scss'
 import { ReactComponent as Logo } from 'assets/icons/logo_s.svg'
 import { ReactComponent as Facebook } from 'assets/icons/facebook.svg'
 import { ReactComponent as Instagram } from 'assets/icons/instagram.svg'
@@ -13,17 +13,17 @@ export default function Footer() {
   function LinkSection() {
     return (
       linksData.map(item => (
-        <section className={styles.footerSection} key={item.id}>
+        <section className="footerSection" key={item.id}>
           <h2 
-            className={styles.sectionTitle}
+            className="sectionTitle"
             style={theme.footer.titleStyle}
           >
             {item.title}
           </h2>
-          <div className={styles.sectionContent}>
+          <div className="sectionContent">
             {item.links.map(link => (
               <a 
-                className={styles.pageLink} 
+                className="pageLink" 
                 href={link.href} 
                 key={link.id}
                 style={theme.footer.linkStyle}>
@@ -38,35 +38,33 @@ export default function Footer() {
 
   return (
     <footer 
-      className={styles.footerContainer}
+      className="footerContainer"
       style={theme.footer.footerStyle}
     >
-      <section className={styles.footerLogoSection}>
-        <div className={styles.footerLogoBox}>
+      <section className="footerLogoSection">
+        <div className="footerLogoBox">
           <Logo 
-            className={styles.alphaLogo}
+            className="alphaLogo"
             // style={theme.footer.iconStyle}
           />
         </div>
       </section>
       <LinkSection />
-      <section className={styles.footerSection}>
-        <h2 
-          className={styles.sectionTitle}
+      <section className="footerSection">
+        <h2 className="sectionTitle"
           style={theme.footer.titleStyle}
         >
           追蹤 ALPHA Shop
         </h2>
-        <div 
-          className={styles.telInfo}
+        <div className="telInfo"
           style={theme.footer.linkStyle}
         >
           +886 02123-45678
         </div>
-        <div className={styles.socialIconGroup}>
-          <Facebook className={styles.icon} />
-          <Instagram className={styles.icon} />
-          <Whatsapp className={styles.icon} />
+        <div className="socialIconGroup">
+          <Facebook className="icon" />
+          <Instagram className="icon" />
+          <Whatsapp className="icon" />
         </div>
       </section>
     </footer>

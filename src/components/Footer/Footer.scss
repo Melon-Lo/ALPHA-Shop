@@ -1,0 +1,69 @@
+@import 'src/styles/base';
+
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 220px;
+
+  // logo
+  .footerLogoSection {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    margin-right: 4rem;
+
+    .footerLogoBox {
+      width: 100%;
+
+      .alphaLogo {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  // links
+  .footerSection {
+    width: 10%;
+    margin: 0 1rem;
+
+    .sectionTitle {
+      font-size: 1.2rem;
+      white-space: nowrap;
+    }
+
+    .sectionContent {
+      all: unset;
+      @extend %flex-column;
+
+      .pageLink {
+        all: unset;
+        margin: 0.1rem 0;
+        font-size: 0.8rem;
+        white-space: nowrap;
+        cursor: pointer;
+      }
+    }
+
+    // contact
+    .telInfo {
+      margin: 0.1rem 0;
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+
+    .socialIconGroup {
+      display: flex;
+      justify-content: flex-start;
+      margin: 0.5rem 0;
+
+      .icon {
+        margin: 0 0.2rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
