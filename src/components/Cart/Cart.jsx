@@ -8,7 +8,6 @@ import { ThemeContext } from 'context/ThemeContext'
 
 function ProductList() {
   const { currentItems, handleClick } = useContext(CartContext)
-  const { theme } = useContext(ThemeContext)
 
   const totalItems = currentItems.map(item => (
     <section className={styles.productContainer} key={item.id}>
