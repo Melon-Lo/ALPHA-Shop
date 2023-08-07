@@ -1,0 +1,80 @@
+@import 'src/styles/base';
+
+.stepOneContainer {
+  display: flex;
+  @extend %centerCenter;
+  margin: 1rem 0;
+  
+  .contact {
+    width: 80%;
+
+    .formTitle {
+      margin: 1rem 0;
+    }
+
+    .inputContainer {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 1.5rem;
+      grid-template-areas: 
+        'title title name name name name'
+        'phoneNumber phoneNumber phoneNumber email email email'
+        'city city address address address address';
+
+      .title {
+        grid-area: title;
+        @extend %inputSet;
+      }
+
+      .name {
+        grid-area: name;
+        @extend %inputSet;
+      }
+
+      .phoneNumber {
+        grid-area: phoneNumber;
+        @extend %inputSet;
+      }
+
+      .email {
+        grid-area: email;
+        @extend %inputSet;
+      }
+
+      .city {
+        grid-area: city;
+        @extend %inputSet;
+      }
+
+      .address {
+        grid-area: address;
+        @extend %inputSet;
+      }
+    }
+  }
+}
+
+// input option
+
+.inputLabel {
+  @extend %inputSet;
+  font-size: 0.8rem;
+}
+
+.selectorContainer {
+  @extend %inputSet;
+  width: 100%;
+}
+
+.optionBox {
+  width: 100%;
+  height: 1.8rem;
+}
+
+.inputBox {
+  @extend %inputSet;
+  width: 100%;
+  height: 1.5rem;
+}

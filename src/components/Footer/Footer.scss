@@ -37,7 +37,7 @@
 
     .sectionContent {
       all: unset;
-      @extend %flex-column;
+      @extend %flexColumn;
 
       .pageLink {
         all: unset;

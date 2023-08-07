@@ -1,7 +1,7 @@
 @import 'src/styles/base';
 
 .cartContainer {
-  @extend %flex-column;
+  @extend %flexColumn;
   height: 100%;
   width: 40%;
   padding: 0.8rem;
@@ -10,7 +10,7 @@
 
   // ProductList
   .productList {
-    @extend %flex-column;
+    @extend %flexColumn;
     height: 50%;
     align-items: center;
     margin: 0.5rem 0;
@@ -32,7 +32,7 @@
         }
 
         .productInfo {
-          @extend %flex-column;
+          @extend %flexColumn;
           justify-content: space-evenly;
           align-items: center;
           width: 40%;
@@ -57,7 +57,7 @@
 
             .productCount {
               display: flex;
-              @extend %center-center;
+              @extend %centerCenter;
             }
           }
         }
@@ -76,7 +76,7 @@
 
   // CartInfo
   .cartInfoContainer {
-    @extend %flex-column;
+    @extend %flexColumn;
     margin: 2rem 0;
 
     &::before {

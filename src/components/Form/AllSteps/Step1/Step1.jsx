@@ -1,4 +1,4 @@
-import styles from './Step1.module.css'
+import './Step1.scss'
 import cityData from './cityData'
 import { useContext } from 'react'
 import { FormContext } from 'context/FormContext'
@@ -10,16 +10,16 @@ export default function Step1() {
   const { inputChange } = useContext(FormContext)
 
   return (
-    <section className={styles.stepOneContainer}>
-      <form action="submit" className={styles.contact}>
-        <h3 className={styles.formTitle}>寄送地址</h3>
-        <div className={styles.inputContainer}>
-          <div className={styles.title}>
-            <p className={styles.inputLabel}>稱謂</p>
-            <div className={styles.selectorContainer}>
+    <section className="stepOneContainer">
+      <form action="submit" className="contact">
+        <h3 className="formTitle">寄送地址</h3>
+        <div className="inputContainer">
+          <div className="title">
+            <p className="inputLabel">稱謂</p>
+            <div className="selectorContainer">
               <select
                 name="title" 
-                className={styles.optionBox}
+                className="optionBox"
                 onChange={(e) => inputChange(e)}
               >
                 <option value="mr">先生</option>
@@ -28,42 +28,42 @@ export default function Step1() {
               </select>
             </div>
           </div> 
-          <div className={styles.name}>
-            <p className={styles.inputLabel}>姓名</p>
+          <div className="name">
+            <p className="inputLabel">姓名</p>
             <input
               name="name" 
-              className={styles.inputBox}
+              className="inputBox"
               type="text"
               placeholder="請輸入姓名"
               onChange={(e) => inputChange(e)}
             />
           </div>
-          <div className={styles.phoneNumber}>
-            <p className={styles.inputLabel}>電話</p>
+          <div className="phoneNumber">
+            <p className="inputLabel">電話</p>
             <input
               name="tel"
-              className={styles.inputBox}
+              className="inputBox"
               type="text" 
               placeholder="請輸入行動電話"
               onChange={(e) => inputChange(e)}
             />
           </div>
-          <div className={styles.email}>
-            <p className={styles.inputLabel}>E-mail</p>
+          <div className="email">
+            <p className="inputLabel">E-mail</p>
             <input
               name="email"
-              className={styles.inputBox}
+              className="inputBox"
               type="text" 
               placeholder="請輸入電子郵件"
               onChange={(e) => inputChange(e)}
             />
           </div>
-          <div className={styles.city}>
-            <p className={styles.inputLabel}>縣市</p>
-            <div className={styles.selectorContainer}>
+          <div className="city">
+            <p className="inputLabel">縣市</p>
+            <div className="selectorContainer">
               <select
                 name="city"
-                className={styles.optionBox}
+                className="optionBox"
                 onChange={(e) => inputChange(e)}
               >
                 <option value="">請選擇縣市</option>
@@ -71,11 +71,11 @@ export default function Step1() {
               </select>
             </div>
           </div>
-          <div className={styles.address}>
-            <p className={styles.inputLabel}>地址</p>
+          <div className="address">
+            <p className="inputLabel">地址</p>
             <input
               name="address"
-              className={styles.inputBox}
+              className="inputBox"
               type="text" 
               placeholder="請輸入地址"
               onChange={(e) => inputChange(e)}

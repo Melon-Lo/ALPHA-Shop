@@ -1,31 +1,24 @@
-.stepOneContainer {
+import .stepOneContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 1rem 0;
 }
-
-.contact {
+import .stepOneContainer .contact {
   width: 80%;
 }
-
-.formTitle {
+import .stepOneContainer .contact .formTitle {
   margin: 1rem 0;
 }
-
-.inputContainer {
+import .stepOneContainer .contact .inputContainer {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 1.5rem;
-  grid-template-areas: 
-    'title title name name name name'
-    'phoneNumber phoneNumber phoneNumber email email email'
-    'city city address address address address';
+  grid-template-areas: "title title name name name name" "phoneNumber phoneNumber phoneNumber email email email" "city city address address address address";
 }
-
-.inputSet {
+import .stepOneContainer .contact .inputContainer .inputSet {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,33 +26,27 @@
   margin: 0;
   padding: 0.2rem 0;
 }
-
-.title {
+import .stepOneContainer .contact .inputContainer .title {
   grid-area: title;
   composes: inputSet;
 }
-
-.name {
+import .stepOneContainer .contact .inputContainer .name {
   grid-area: name;
   composes: inputSet;
 }
-
-.phoneNumber {
+import .stepOneContainer .contact .inputContainer .phoneNumber {
   grid-area: phoneNumber;
   composes: inputSet;
 }
-
-.email {
+import .stepOneContainer .contact .inputContainer .email {
   grid-area: email;
   composes: inputSet;
 }
-
-.city {
+import .stepOneContainer .contact .inputContainer .city {
   grid-area: city;
   composes: inputSet;
 }
-
-.address {
+import .stepOneContainer .contact .inputContainer .address {
   grid-area: address;
   composes: inputSet;
 }
@@ -83,4 +70,4 @@
   composes: inputSet;
   width: 100%;
   height: 1.5rem;
-}
+}/*# sourceMappingURL=Step1.css.map */

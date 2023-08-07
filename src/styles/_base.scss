@@ -1,9 +1,9 @@
-%flex-column {
+%flexColumn {
   display: flex;
   flex-direction: column;
 }
 
-%center-center {
+%centerCenter {
   justify-content: center;
   align-items: center;
 }
@@ -13,4 +13,13 @@
   width: 100%;
   height: 1px;
   background-color: rgb(205, 205, 205);
+}
+
+%inputSet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0.2rem 0;
 }
