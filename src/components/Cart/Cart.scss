@@ -82,6 +82,7 @@
     &::before {
       margin: 1rem 0;
       @extend %line;
+      width: 100%;
     }
 
     .cartInfo {
