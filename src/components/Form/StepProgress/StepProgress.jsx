@@ -2,6 +2,7 @@ import './StepProgress.scss'
 import { useContext } from 'react'
 import { FormContext } from 'context/FormContext'
 import { ThemeContext } from 'context/ThemeContext'
+import { ReactComponent as Complete } from 'assets/icons/pg-complete.svg'
 
 export default function StepProgress() {
   const { step } = useContext(FormContext)
@@ -29,7 +30,9 @@ export default function StepProgress() {
             "progressIcon"
           }
         >
-          <span className={step === currentStep ? "activeText" : "progressText"}>{currentStep}</span>
+          <span className={step === currentStep ? "activeText" : "progressText"}> 
+            {step <= currentStep ? currentStep : <Complete />}
+          </span>
         </span>
         <span className={getLabelClassName()}>{label}</span>
       </div>
