@@ -12,6 +12,11 @@ const themes = {
       iconStyle: {
         fill: "#000000",
         stroke: "#000000"
+      },
+      mobileNavbarStyle: {
+        background: "#FFFFFF",
+        color: "rgb(85, 85, 85)",
+        boxShadow: "0 5px 5px rgb(233, 233, 233)",
       }
     },
     checkout: {
@@ -51,7 +56,12 @@ const themes = {
       iconStyle: {
         fill: "#FFFFFF",
         stroke: "#FFFFFF"
-      }
+      },
+      mobileNavbarStyle: {
+        background: "#121212",
+        color: "#FFFFFF",
+        boxShadow: "0 5px 5px #000000",
+      },
     },
     checkout: {
       checkoutStyle: {

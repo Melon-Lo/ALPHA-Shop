@@ -1,3 +1,5 @@
+// desktop
+
 .headerContainer {
   position: fixed;
   top: 0;
@@ -5,7 +7,12 @@
   height: 60px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
+
+  .toggle {
+    display: none;
+  }
 
   .navBar {
     display: flex;
@@ -19,11 +26,16 @@
       margin: 0 0.5rem;
       white-space: nowrap;
       cursor: pointer;
+
+      &:hover {
+        color: #F67599;
+      }
     }
   }
 
   .logoBox {
     width: 30%;
+    height: 80%;
     margin: 0.5rem 0;
     cursor: pointer;
 
@@ -46,3 +58,102 @@
     }
   }
 }
+
+// mobile
+
+@media screen and (max-width: 576px) {
+  @import 'src/styles/base';
+
+  .headerContainer {
+    justify-content: center;
+
+    .toggle {
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 100%;
+      width: 20%;
+      cursor: pointer;
+    }
+
+    .navBar {
+      position: fixed;
+      width: 100vh;
+      height: auto;
+      top: 60px;
+      @extend %flexColumn;
+      background-color: $white;
+      // animation: showItem 0.5s ease-in;
+      // animation: hideItem 0.5s ease-in;
+      
+
+      .navLink {
+        @extend %flexColumn;
+        align-items: center;
+        margin: 1.5rem 0;
+        font-size: 1.5rem;
+
+        &::after {
+          content: '';
+          margin: 0.8rem;
+          width: 30vh;
+          height: 0.5px;
+          background-color: $gray;
+        }
+      }
+
+      .navFunctionBox {
+        display: flex;
+        justify-content: center;
+
+        .navFunction {
+          margin: 1.5rem;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .logoBox {
+      width: 30%;
+      margin: 0.5rem 0;
+      cursor: pointer;
+
+      .logo {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .functionBox {
+      display: none;
+    }
+  }
+}
+
+// animation
+
+// @keyframes showItem {
+//   0% {
+//     transform-origin: top center;
+//     transform: scale(1, 0);
+//     opacity: 0;
+//   }
+//   100% {
+//     transform-origin: top center;
+//     transform: scale(1, 1);
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes hideItem {
+//   0% {
+//     transform-origin: top center;
+//     transform: scale(1, 1);
+//     opacity: 1;
+//   }
+//   100% {
+//     transform-origin: top center;
+//     transform: scale(1, 0);
+//     opacity: 0;
+//   }
+// }
