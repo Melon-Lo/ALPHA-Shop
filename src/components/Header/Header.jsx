@@ -70,15 +70,6 @@ export default function Header() {
   function ToggleNavBar() {
     return (
       <>
-        {/* <CSSTransition
-          in={true}
-          timeout={1000}
-          classNames="test"
-          onEnter={() => console.log('Enter')}
-          onExit={() => console.log('Exit')}
-        >
-          <div>test</div>
-        </CSSTransition> */}
         <Toggle 
           style={theme.header.iconStyle} 
           className="toggle" 
@@ -88,17 +79,17 @@ export default function Header() {
         <Logo className="logo"/>
         </a>
         {isToggled && 
-          <CSSTransition
-            in={true}
-            timeout={1000}
-            classNames="showItem"
-            unmountOnExit
-          >
+          // <CSSTransition
+          //   in={true}
+          //   timeout={1000}
+          //   classNames="showItem"
+          //   unmountOnExit
+          // >
             <nav style={theme.header.mobileNavbarStyle} className='navBar'>
               <Links />
               <FunctionBox className={'navFunctionBox'} iconClassName={'navFunction'}/>
             </nav>
-          </CSSTransition>
+          // </CSSTransition>
         }
       </>
     )
