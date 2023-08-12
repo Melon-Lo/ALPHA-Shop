@@ -7,20 +7,14 @@ import { ReactComponent as Sun } from 'assets/icons/sun.svg'
 import { ReactComponent as Toggle } from 'assets/icons/toggle.svg'
 import { useContext, useEffect, useState } from 'react'
 import { ThemeContext } from 'context/ThemeContext'
+import { WindowWidthContext } from 'context/WindowWidthContext'
 import navLinksData from './linksData'
 import { CSSTransition } from 'react-transition-group'
 
 export default function Header() {
   const { theme, toggleTheme } = useContext(ThemeContext)
+  const { windowWidth } = useContext(WindowWidthContext)
   const [ isToggled, setIsToggled ] = useState(false)
-  const [ windowWidth, setWindowWidth ] = useState(window.innerWidth)
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth)
-    }
-    window.addEventListener('resize', handleResize)
-  })
 
   function Links() {
     return (

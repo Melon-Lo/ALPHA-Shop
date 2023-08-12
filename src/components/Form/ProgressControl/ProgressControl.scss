@@ -1,3 +1,5 @@
+////////// desktop //////////
+
 @import 'src/styles/base';
 
 .progressControlContainer {
@@ -38,4 +40,29 @@
 
 .icon {
   fill: $gray;
+}
+
+////////// mobile //////////
+
+@media screen and (max-width: 576px) {
+  .progressControlContainer {
+    margin: 0;
+    &::before {
+      width: 0;
+    }
+    .buttonGroup {
+      .previous {
+        width: 8.5rem;
+        height: 3.5rem;
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
+      .next {
+        width: 8.5rem;
+        height: 3.5rem;
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
+    }
+  }
 }

@@ -3,7 +3,7 @@ import initailData from "components/Cart/itemsData";
 import { ShippingContext } from "./ShippingContext";
 export const CartContext = createContext()
 
-export function CartContextProvider({ children }) {
+export default function CartContextProvider({ children }) {
   const [currentItems, setCurrentItems] = useState(initailData)
   const { shipping } = useContext(ShippingContext)
 
