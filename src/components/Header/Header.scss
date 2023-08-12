@@ -129,34 +129,20 @@
 
 // animation
 
-// .showItem-enter {
-//   opacity: 0;
-//   transition: opacity 1000ms ease-in;
-// }
+.showItem-enter {
+  opacity: 0;
+  transition: opacity 1000ms ease-in;
+}
 
-// .showItem-enter-active {
-//   opacity: 1;
-// }
+.showItem-enter-active {
+  opacity: 1;
+}
 
-// .showItem-exit {
-//   opacity: 1;
-// }
+.showItem-exit {
+  opacity: 1;
+}
 
-// .showItem-exit-active {
-//   opacity: 0;
-//   transition: opacity 1000ms ease-in;
-// }
-
-
-
-
-// .test-enter {
-//   opacity: 0;
-//   transition: opacity 1000ms ease-in;
-//   background-color: red;
-// }
-
-// .test-enter-active {
-//   opacity: 1;
-//   background-color: green;
-// }
+.showItem-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms ease-in;
+}

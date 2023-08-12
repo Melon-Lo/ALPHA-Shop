@@ -79,17 +79,17 @@ export default function Header() {
         <Logo className="logo"/>
         </a>
         {isToggled && 
-          // <CSSTransition
-          //   in={true}
-          //   timeout={1000}
-          //   classNames="showItem"
-          //   unmountOnExit
-          // >
+          <CSSTransition
+            in={isToggled}
+            timeout={1000}
+            classNames="showItem"
+            unmountOnExit
+          >
             <nav style={theme.header.mobileNavbarStyle} className='navBar'>
               <Links />
               <FunctionBox className={'navFunctionBox'} iconClassName={'navFunction'}/>
             </nav>
-          // </CSSTransition>
+          </CSSTransition>
         }
       </>
     )
