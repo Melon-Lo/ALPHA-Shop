@@ -1,0 +1,9 @@
+.allStepsContainer {
+  height: 480px;
+}
+
+@media screen and (max-width: 576px) {
+  .allStepsContainer {
+    height: auto;
+  }
+}

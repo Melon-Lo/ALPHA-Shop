@@ -8,12 +8,9 @@ import { ShippingContext } from 'context/ShippingContext'
 import { ThemeContext } from 'context/ThemeContext'
 import { WindowWidthContext } from 'context/WindowWidthContext'
 
-function ProductList({ windowWidth }) {
-  const { currentItems, handleClick } = useContext(CartContext)
-  
-
-  const totalItems = currentItems.map(item => (
-    <section className="productContainer" key={item.id}>
+function CartItem({ item, windowWidth, handleClick }) {
+  return (
+    <section className="productContainer">
       <div className="productItem">
         <img src={item.img} alt={item.name} className="imgContainer"/>
         { windowWidth > 576 ? 
@@ -66,13 +63,11 @@ function ProductList({ windowWidth }) {
         }
       </div>
     </section>
-  ))
-
-  return totalItems
+  )
 }
 
 export default function Cart() {
-  const { total } = useContext(CartContext)
+  const { total, handleClick, currentItems } = useContext(CartContext)
   const { shipping } = useContext(ShippingContext)
   const { theme } = useContext(ThemeContext)
   const { windowWidth } = useContext(WindowWidthContext)
@@ -83,8 +78,9 @@ export default function Cart() {
       style={theme.checkout.cartStyle}  
     >
       { windowWidth > 576 && <h3 className="cartTitle">購物籃</h3> }
+
       <section className="productList">
-      <ProductList windowWidth={windowWidth} />
+        {currentItems.map((item) => <CartItem item={item} key={item.id} windowWidth={windowWidth} handleClick={handleClick}/>)}
       </section>
       <section className="cartInfoContainer">
         <section className="cartInfo">

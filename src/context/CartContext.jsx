@@ -7,14 +7,9 @@ export default function CartContextProvider({ children }) {
   const [currentItems, setCurrentItems] = useState(initailData)
   const { shipping } = useContext(ShippingContext)
 
-  let itemTotal = []
-  currentItems.map(item => {
-    itemTotal.push(item.price * item.quantity)
-  })
-  itemTotal.push(shipping)
-  const total = itemTotal.reduce((accumulator, currenValue) => {
-    return accumulator + currenValue
-  })
+  const total = currentItems.reduce((acc, curr) => {
+    return acc + curr.price * curr.quantity
+  }, shipping)
 
   function handleClick(id, calc) {
     setCurrentItems(
