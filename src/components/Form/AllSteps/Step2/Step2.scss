@@ -1,3 +1,5 @@
+////////// desktop //////////
+
 @import 'src/styles/base';
 
 .stepTwoContainer {
@@ -46,11 +48,14 @@
   }
 }
 
+////////// mobile //////////
 
-
-
-
-
-
-
-
+@media screen and (max-width: 576px) {
+  .stepTwoContainer {
+    .form {
+      .formTitle {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

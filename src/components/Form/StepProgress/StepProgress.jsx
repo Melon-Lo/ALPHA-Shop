@@ -31,7 +31,11 @@ export default function StepProgress() {
           }
         >
           <span className={step === currentStep ? "activeText" : "progressText"}> 
-            {step <= currentStep ? currentStep : <Complete />}
+            {step <= currentStep ? currentStep : 
+              <div className='iconBox'>
+                <Complete className='icon'/>
+              </div>
+            }
           </span>
         </span>
         <span className={getLabelClassName()}>{label}</span>

@@ -36,7 +36,6 @@
     }
 
     .sectionContent {
-      all: unset;
       @extend %flexColumn;
 
       .pageLink {
@@ -65,5 +64,11 @@
         cursor: pointer;
       }
     }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footerContainer {
+    display: none;
   }
 }

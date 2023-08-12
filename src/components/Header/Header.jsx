@@ -5,10 +5,10 @@ import { ReactComponent as Cart } from 'assets/icons/cart.svg'
 import { ReactComponent as Moon } from 'assets/icons/moon.svg'
 import { ReactComponent as Sun } from 'assets/icons/sun.svg'
 import { ReactComponent as Toggle } from 'assets/icons/toggle.svg'
-
 import { useContext, useEffect, useState } from 'react'
 import { ThemeContext } from 'context/ThemeContext'
 import navLinksData from './linksData'
+import { CSSTransition } from 'react-transition-group'
 
 export default function Header() {
   const { theme, toggleTheme } = useContext(ThemeContext)
@@ -76,15 +76,35 @@ export default function Header() {
   function ToggleNavBar() {
     return (
       <>
-        <Toggle style={theme.header.iconStyle} className="toggle" onClick={() => setIsToggled(!isToggled)}/>
+        {/* <CSSTransition
+          in={true}
+          timeout={1000}
+          classNames="test"
+          onEnter={() => console.log('Enter')}
+          onExit={() => console.log('Exit')}
+        >
+          <div>test</div>
+        </CSSTransition> */}
+        <Toggle 
+          style={theme.header.iconStyle} 
+          className="toggle" 
+          onClick={() => setIsToggled(!isToggled)}
+        />
         <a className="logoBox" href="*">
-          <Logo className="logo"/>
+        <Logo className="logo"/>
         </a>
         {isToggled && 
-          <nav style={theme.header.mobileNavbarStyle} className='navBar'>
-            <Links />
-            <FunctionBox className={'navFunctionBox'} iconClassName={'navFunction'}/>
-          </nav>
+          <CSSTransition
+            in={true}
+            timeout={1000}
+            classNames="showItem"
+            unmountOnExit
+          >
+            <nav style={theme.header.mobileNavbarStyle} className='navBar'>
+              <Links />
+              <FunctionBox className={'navFunctionBox'} iconClassName={'navFunction'}/>
+            </nav>
+          </CSSTransition>
         }
       </>
       

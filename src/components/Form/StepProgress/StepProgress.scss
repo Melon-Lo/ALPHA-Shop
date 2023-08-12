@@ -1,3 +1,5 @@
+////////// desktop //////////
+
 @import 'src/styles/base';
 
 %activeTheme {
@@ -83,3 +85,65 @@
   font-size: 0.7rem;
   white-space: nowrap;
 }
+
+////////// mobile //////////
+
+@media screen and (max-width: 576px) {
+  .stepProgressContainer {
+    .progressStep {
+      .progressIcon {
+        width: 3rem;
+        height: 3rem;
+      }
+      .progressText {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  // active setting
+
+  .iconBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+
+    .icon {
+      width: 100%;
+      height: 100%;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      left: 150%;
+      width: 150%;
+      height: 1.5px;
+      background-color: black;
+    }
+  }
+
+  .activeIcon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .activeText {
+    font-size: 1.5rem;
+  }
+
+  .lightActive {
+    display: none;
+  }
+
+  .darkActive {
+    display: none;
+  }
+
+  .notActive {
+    display: none;
+  }
+}
+
