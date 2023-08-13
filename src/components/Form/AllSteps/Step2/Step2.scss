@@ -20,6 +20,7 @@
       display: flex;
       justify-content: space-between;
       padding: 1rem;
+      cursor: pointer;
 
       .infoBox {
         width: 80%;
@@ -47,6 +48,48 @@
     }
   }
 }
+
+// input setting
+
+.radioGroup {
+  position: relative;
+
+  input[type=radio] {
+    cursor: pointer;
+    opacity: 0;
+
+    &:checked ~ .infoBox::after {
+      opacity: 1;
+    }
+  }
+
+  .infoBox {
+    &::after {
+      position: absolute;
+      content: '';
+      top: 5vw;
+      left: 5vw;
+      width: 2.5vw;
+      height: 2.5vw;
+      background-color: #F67599;
+      border-radius: 50%;
+      opacity: 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 4vw;
+      left: 4vw;
+      width: 4vw;
+      height: 4vw;
+      border: 2px solid rgb(74, 74, 74);
+      border-radius: 50%;
+    }
+  }
+}
+
+
 
 ////////// mobile //////////
 

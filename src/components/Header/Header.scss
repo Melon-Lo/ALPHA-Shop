@@ -9,6 +9,7 @@
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  z-index: 3;
 
   .toggle {
     display: none;
@@ -83,6 +84,7 @@
       top: 60px;
       @extend %flexColumn;
       background-color: $white;
+      z-index: 3;
       
       .navLink {
         @extend %flexColumn;

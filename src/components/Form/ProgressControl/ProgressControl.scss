@@ -25,6 +25,10 @@
       left: 0;
       background-color: transparent;
       color: $gray;
+
+      &:hover {
+        border: 1.5px solid black;
+      }
     }
 
     .next {
@@ -32,6 +36,10 @@
       right: 0;
       background-color: $pink;
       color: $white;
+
+      &:hover {
+        border: 1.5px solid black;
+      }
     }
   }
 }
