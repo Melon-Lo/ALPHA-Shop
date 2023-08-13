@@ -64,25 +64,28 @@
   }
 
   .infoBox {
+    position: relative;
+
     &::after {
       position: absolute;
       content: '';
-      top: 5vw;
-      left: 5vw;
-      width: 2.5vw;
-      height: 2.5vw;
+      top: 15px;
+      left: -44.5px;
+      width: 12px;
+      height: 12px;
       background-color: #F67599;
       border-radius: 50%;
       opacity: 0;
+      transition: ease-in 0.15s;
     }
 
     &::before {
       position: absolute;
       content: '';
-      top: 4vw;
-      left: 4vw;
-      width: 4vw;
-      height: 4vw;
+      top: 10px;
+      left: -50px;
+      width: 20px;
+      height: 20px;
       border: 2px solid rgb(74, 74, 74);
       border-radius: 50%;
     }

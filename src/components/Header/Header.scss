@@ -128,23 +128,3 @@
     }
   }
 }
-
-// animation
-
-.showItem-enter {
-  opacity: 0;
-  transition: opacity 1000ms ease-in;
-}
-
-.showItem-enter-active {
-  opacity: 1;
-}
-
-.showItem-exit {
-  opacity: 1;
-}
-
-.showItem-exit-active {
-  opacity: 0;
-  transition: opacity 1000ms ease-in;
-}

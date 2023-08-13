@@ -5,7 +5,7 @@ import { ReactComponent as Cart } from 'assets/icons/cart.svg'
 import { ReactComponent as Moon } from 'assets/icons/moon.svg'
 import { ReactComponent as Sun } from 'assets/icons/sun.svg'
 import { ReactComponent as Toggle } from 'assets/icons/toggle.svg'
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useState } from 'react'
 import { ThemeContext } from 'context/ThemeContext'
 import { WindowWidthContext } from 'context/WindowWidthContext'
 import navLinksData from './linksData'
@@ -79,17 +79,10 @@ export default function Header() {
         <Logo className="logo"/>
         </a>
         {isToggled && 
-          <CSSTransition
-            in={isToggled}
-            timeout={1000}
-            classNames="showItem"
-            unmountOnExit
-          >
-            <nav style={theme.header.mobileNavbarStyle} className='navBar'>
-              <Links />
-              <FunctionBox className={'navFunctionBox'} iconClassName={'navFunction'}/>
-            </nav>
-          </CSSTransition>
+          <nav style={theme.header.mobileNavbarStyle} className='navBar'>
+            <Links />
+            <FunctionBox className={'navFunctionBox'} iconClassName={'navFunction'}/>
+          </nav>
         }
       </>
     )
