@@ -9,7 +9,6 @@ import { useContext, useState } from 'react'
 import { ThemeContext } from 'context/ThemeContext'
 import { WindowWidthContext } from 'context/WindowWidthContext'
 import navLinksData from './linksData'
-import { CSSTransition } from 'react-transition-group'
 
 export default function Header() {
   const { theme, toggleTheme } = useContext(ThemeContext)
@@ -92,7 +91,7 @@ export default function Header() {
     <header className="headerContainer"
       style={theme.header.headerStyle}
     >
-      {windowWidth > 576 ? <NavBar /> : <ToggleNavBar />}
+      {windowWidth > 945 ? <NavBar /> : <ToggleNavBar />}
     </header>
   )
 }

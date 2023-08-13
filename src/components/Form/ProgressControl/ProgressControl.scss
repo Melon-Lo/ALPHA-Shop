@@ -25,10 +25,6 @@
       left: 0;
       background-color: transparent;
       color: $gray;
-
-      &:hover {
-        border: 1.5px solid black;
-      }
     }
 
     .next {
@@ -36,10 +32,6 @@
       right: 0;
       background-color: $pink;
       color: $white;
-
-      &:hover {
-        border: 1.5px solid rgb(74, 74, 74)
-      }
     }
   }
 }
@@ -65,6 +57,7 @@
         font-size: 1.5rem;
         font-weight: 800;
       }
+
       .next {
         width: 8.5rem;
         height: 3.5rem;
