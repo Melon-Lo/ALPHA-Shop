@@ -5,9 +5,11 @@ import { ReactComponent as Cart } from 'assets/icons/cart.svg'
 import { ReactComponent as Moon } from 'assets/icons/moon.svg'
 import { ReactComponent as Sun } from 'assets/icons/sun.svg'
 import { ReactComponent as Toggle } from 'assets/icons/toggle.svg'
+import { ReactComponent as X } from 'assets/icons/x.svg'
 import { useContext, useState } from 'react'
 import { ThemeContext } from 'context/ThemeContext'
 import { WindowWidthContext } from 'context/WindowWidthContext'
+import { useSpring, animated } from 'react-spring'
 import navLinksData from './linksData'
 
 export default function Header() {
@@ -67,21 +69,40 @@ export default function Header() {
   }
 
   function ToggleNavBar() {
+
+    const navBarProps = useSpring({
+      from: { scaleY: 0 },
+      to: { scaleY: 1 },
+      config: {
+        duration: 500,
+      }
+    })
+
     return (
       <>
-        <Toggle 
-          style={theme.header.iconStyle} 
-          className="toggle" 
-          onClick={() => setIsToggled(!isToggled)}
-        />
+        { isToggled ?
+          <X 
+            style={theme.header.iconStyle} 
+            className="toggle"
+            onClick={() => setIsToggled(!isToggled)}
+          /> :
+          <Toggle 
+            style={theme.header.iconStyle} 
+            className="toggle" 
+            onClick={() => setIsToggled(!isToggled)}
+          />
+        }
+        
         <a className="logoBox" href="*">
         <Logo className="logo"/>
         </a>
-        {isToggled && 
-          <nav style={theme.header.mobileNavbarStyle} className='navBar'>
-            <Links />
-            <FunctionBox className={'navFunctionBox'} iconClassName={'navFunction'}/>
-          </nav>
+        { isToggled && 
+          <animated.div className="navBarBox" style={navBarProps}>
+            <nav style={theme.header.mobileNavbarStyle} className="navBar">
+              <Links />
+              <FunctionBox className="navFunctionBox" iconClassName="navFunction"/>
+            </nav>
+          </animated.div>
         }
       </>
     )

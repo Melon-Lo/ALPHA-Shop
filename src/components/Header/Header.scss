@@ -71,60 +71,66 @@
     .toggle {
       display: block;
       position: absolute;
-      left: 0;
-      height: 100%;
-      width: 20%;
+      left: 20px;
+      height: 40px;
+      width: 40px;
       cursor: pointer;
     }
-
-    .navBar {
+    
+    .navBarBox {
       position: fixed;
       width: 100vw;
-      height: auto;
       top: 60px;
-      @extend %flexColumn;
-      background-color: $white;
-      z-index: 3;
-      
-      .navLink {
+
+      .navBar {
+        position: absolute;
+        width: 100vw;
+        top: 0;
+        right: -30px;
         @extend %flexColumn;
-        align-items: center;
-        margin: 1.5rem 0;
-        font-size: 1.5rem;
+        background-color: $white;
+        z-index: 3;
+        
+        .navLink {
+          @extend %flexColumn;
+          align-items: center;
+          margin: 1.5rem 0;
+          font-size: 1.5rem;
 
-        &::after {
-          content: '';
-          margin: 0.8rem;
-          width: 30vw;
-          height: 0.5px;
-          background-color: $gray;
+          &::after {
+            content: '';
+            margin: 0.8rem;
+            width: 30vw;
+            height: 0.5px;
+            background-color: $gray;
+          }
+        }
+
+        .navFunctionBox {
+          display: flex;
+          justify-content: center;
+
+          .navFunction {
+            margin: 1.5rem;
+            cursor: pointer;
+          }
         }
       }
 
-      .navFunctionBox {
-        display: flex;
-        justify-content: center;
+      .logoBox {
+        width: 30%;
+        margin: 0.5rem 0;
+        cursor: pointer;
 
-        .navFunction {
-          margin: 1.5rem;
-          cursor: pointer;
+        .logo {
+          height: 100%;
+          width: 100%;
         }
       }
-    }
 
-    .logoBox {
-      width: 30%;
-      margin: 0.5rem 0;
-      cursor: pointer;
-
-      .logo {
-        height: 100%;
-        width: 100%;
-      }
-    }
-
-    .functionBox {
-      display: none;
+      .functionBox {
+        display: none;
+      }      
     }
   }
 }
